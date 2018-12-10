@@ -6,8 +6,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('https://nerdstore.vteximg.com.br/arquivos/gtav-1.jpg');
-  background-size: 100vw;
+  /* background-image: url('https://nerdstore.vteximg.com.br/arquivos/gtav-1.jpg');
+  background-size: 100vw; */
 }
 
 code {

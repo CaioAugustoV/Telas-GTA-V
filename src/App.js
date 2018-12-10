@@ -1,7 +1,21 @@
 import React, { Component } from 'react';
+import { Line, Circle } from 'rc-progress';
 import './App.css';
 
+
 class App extends Component {
+  constructor(props){
+    super(props)
+    this.state = {
+      teste: 10
+    }
+  }
+  testeTest = () => {
+    this.setState({
+      teste: this.state.teste + 10,
+    })
+    console.log(this.state.teste)
+  }
   render() {
     return (
       <div className="App">
@@ -45,6 +59,8 @@ class App extends Component {
             </div>
           </div>
         </div>
+        <Line percent={this.state.teste} strokeWidth="1" strokeColor="#000"/>
+        <a onClick={this.testeTest}>FDTAFYDFAYT</a>
         <style jsx>{`
           .main-profile{
             display: flex;
