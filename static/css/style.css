@@ -1,0 +1,11 @@
+@font-face {
+  font-family: 'Big Noodle';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Big Noodle'), local('BigNoodle'),
+       url('../fonts/big_noodle_titling-webfont.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/big_noodle_titling-webfont.woff') format('woff'), /* Modern Browsers */
+}
+body {
+  font-family: 'Big Noodle';
+}
