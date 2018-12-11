@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { Line, Circle } from 'rc-progress';
+import { Line } from 'rc-progress';
 import './App.css';
 
 
 class App extends Component {
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = {
       teste: 10
@@ -35,12 +35,34 @@ class App extends Component {
                   <div className="bar-one">
                     <div className="bar-top">
                       <div className="life">
-                        <div className="bar"></div>
-                        <div className="icon-life"></div>
+                        <div className="bar">
+                          <Line 
+                            percent={this.state.teste} 
+                            strokeWidth="8"
+                            trailWidth="8"
+                            strokeLinecap="butt"
+                            strokeColor="#9af5d2" 
+                            trailColor="#09eb95" 
+                          />
+                        </div>
+                        <div className="icon-life">
+                          <div className="TESTE"/>
+                        </div>
                       </div>
                       <div className="colete">
-                        <div className="bar"></div>
-                        <div className="icon-colete"></div>
+                        <div className="bar">
+                          <Line 
+                            percent={this.state.teste} 
+                            strokeWidth="8"
+                            trailWidth="8"
+                            strokeLinecap="butt"
+                            strokeColor="#8eeffb" 
+                            trailColor="#0ad4ec" 
+                            />
+                        </div>
+                        <div className="icon-colete">
+                          <div className="TESTE"/>
+                        </div>
                       </div>
                     </div>
                     <div className="bar-botton">
@@ -50,18 +72,76 @@ class App extends Component {
                     </div>
                   </div>
                   <div className="bar-two">
-                      <div className="level"></div>
-                      <div className="nSei"></div>
-                      <div className="gas"></div>
+                    <div className="level"></div>
+                    <div className="bar-fine-position">
+                      <div className="icon-fome">
+                        <div className="TESTE"/>                      
+                      </div>
+                      <div className="nSei">
+                          <Line 
+                            percent={this.state.teste} 
+                            strokeWidth="18"
+                            trailWidth="18"
+                            strokeLinecap="butt"
+                            strokeColor="#ffbd69" 
+                            trailColor="#ec890a" 
+                          />
+                      </div>
+                    </div>
+                    <div className="bar-fine-position">
+                      <div className="icon-sede">
+                        <div className="TESTE"/>
+                      </div>
+                      <div className="gas">
+                        <Line 
+                          percent={this.state.teste} 
+                          strokeWidth="18"
+                          trailWidth="18"
+                          strokeLinecap="butt"
+                          strokeColor="#78f1ff" 
+                          trailColor="#0ad4ec" 
+                        />
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <Line percent={this.state.teste} strokeWidth="1" strokeColor="#000"/>
         <a onClick={this.testeTest}>FDTAFYDFAYT</a>
         <style jsx>{`
+          .TESTE{
+            background-image: url(https://image.flaticon.com/icons/png/512/1246/1246321.png);
+            width: 15px;
+            height: 15px;
+            background-size: 15px;
+          }
+          .icon-fome{
+            height: 1.3vw;
+            width: 1.3vw;
+            background: rgba(60, 69, 64, 0.8);
+            border: solid 1px #5d6d63;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+          }
+          .icon-sede{
+            height: 1.3vw;
+            width: 1.3vw;
+            background: rgba(60, 69, 64, 0.8);
+            border: solid 1px #5d6d63;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+          }
+          .bar-fine-position{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+          }
           .main-profile{
             display: flex;
             flex-direction: row;
@@ -134,18 +214,31 @@ class App extends Component {
             width: 19vw;
             background: rgba(60, 69, 64, 0.8);
             border: solid 1px #5d6d63;
+            padding: 0px 3px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
           }
           .icon-life{
             height: 2vw;
             width: 2vw;
             background: rgba(60, 69, 64, 0.8);
             border: solid 1px #5d6d63;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
           }
           .icon-colete{
             height: 2vw;
             width: 2vw;
             background: rgba(60, 69, 64, 0.8);
             border: solid 1px #5d6d63;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
           }
           .bar-botton{
             display: flex;
@@ -186,14 +279,22 @@ class App extends Component {
           .nSei{
             background: rgba(60, 69, 64, 0.8);
             border: solid 1px #5d6d63;
-            width: 7vw;
+            width: 4.5vw;
             height: 1.3vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0px 3px;
           }
           .gas{
             background: rgba(60, 69, 64, 0.8);
             border: solid 1px #5d6d63;
-            width: 7vw;
+            width: 4.5vw;
             height: 1.3vw;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 0px 3px;
           }  
         `}</style>
       </div>
